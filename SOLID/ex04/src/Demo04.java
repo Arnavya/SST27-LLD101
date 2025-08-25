@@ -1,6 +1,9 @@
-
 public class Demo04 {
     public static void main(String[] args) {
-        System.out.println(new PaymentService().pay(new Payment("UPI", 499)));
+        PaymentService service = new PaymentService();
+
+        System.out.println(service.processPayment(new CardPayment(), 1200));
+        System.out.println(service.processPayment(new UpiPayment(), 499));
+        System.out.println(service.processPayment(new WalletPayment(), 300));
     }
 }
