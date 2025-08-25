@@ -1,5 +1,4 @@
-public class Bird {
-     void fly(){
-         System.out.println("Flap!"); 
-        } 
-    }
+// Bird.java
+public abstract class Bird {
+    public abstract void makeSound();
+}
